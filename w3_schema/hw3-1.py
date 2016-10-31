@@ -28,27 +28,26 @@ def find():
         homework_min_score = 1000
         is_min_score = False
 
-        score_list = doc['scores']
-        for item in score_list:
+        student_score_list = doc['scores']
+        print("student score list: {}".format(student_score_list))
+
+        for item in student_score_list:
             if item['type'] == 'homework':
                 if item['score'] < homework_min_score:
                     homework_min_score = item['score']
     
 
-        print("homework min score: {}".format(homework_min_score))
-        print("id: {}".format(doc['_id']))
+        print("student id {} - homework min score: {}".format(doc['_id'], homework_min_score))
 
-        updated_score_info = []
-        original_score_info = students.find_one({ '_id': doc['_id'] }, {'scores': 1, '_id': 0})
-        print("original_score_info: {}".format(original_score_info))
-        for i in original_score_info['scores']:
-            if i['type'] != 'homework':
-                updated_score_info.append(i)
+        # Loop through student score list again and remove the lowest homework score
+        for i, item in enumerate(student_score_list):
+            if item['type'] == 'homework' and item['score'] == homework_min_score:
+                print("will delete {}".format(student_score_list[i]))
+                del (student_score_list[i])
 
-        print("updated_score_info: {}".format(updated_score_info))
-
-        #students.update_one({'_id': minscore_id},
-        #                 {'$set': {'score': updated_score_info}})
+        # Updated the document in database
+        print("will update document: scores: {}".format(student_score_list))
+        students.update_one({'_id': doc['_id']}, {'$set': {'scores': student_score_list}})
 
 
 if __name__ == '__main__':
