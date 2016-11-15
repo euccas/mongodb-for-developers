@@ -1,5 +1,5 @@
-# mongodb-for-developers
-MongoDB University Course - MongoDB for (Python) Developers. Examples and Exercises.
+# mongodb-for-developers-M101P
+MongoDB University Training Course - M101P: MongoDB for (Python) Developers. Examples and Exercises.
 
 Requirements:
 - Install MongoDB on your machine
