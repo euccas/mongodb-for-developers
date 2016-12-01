@@ -66,10 +66,16 @@ c.objsLeftInBatch();
 # Comparison Operators
 
 * For comparison of different BSON type values, use the comparison operators
-
   * $eq
   * $gt
   * $gte
   * $lt
   * $lte
   * $ne
+
+# Element Operators
+
+Operators:
+* $exists
+* $type
+
