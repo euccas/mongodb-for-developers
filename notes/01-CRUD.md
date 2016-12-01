@@ -34,8 +34,28 @@ db.<collection>.find( { rated: "PG" }, { title: 1 } )
 ```
 
 * Expression matches on Arrays
+
+  * Equality matches on arrays
+    * On the entire array
+    * Based on any element
+    * Based on a specific element
+    * More complex matches using operators
+
+```
+  # Match on the entire array: The order of the array elements matters
+  db.movieDetails.find({ "writers": ["Ethan Coen", "Joel Coen"] }).count()
+  
+  # Match on any element: No need to put the element in an array format [] in the query
+  db.movieDetails.find({ "writers": "Ethan Coen" })
+  
+  # Match on a specific element
+  db.movieDetails.find({ "writers.0": "Ethan Coen" })
+  
+```
+
   * Look for MongoDB cursor document to know more about it
-  * Projections: return explicitly include fields. Improve the efficiency of queries by limiting the returned fields.
+
+* Projections: return explicitly include fields. Improve the efficiency of queries by limiting the returned fields.
 
 # Comparison Operators
 
