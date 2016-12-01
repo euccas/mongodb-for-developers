@@ -77,5 +77,14 @@ c.objsLeftInBatch();
 
 Operators:
 * $exists
+
+```
+db.<collection>.find({ "rated": { $exist: true } })
+```
+
 * $type
+
+```
+db.<collection>.find({ "_id": { $type: "string" } })
+```
 
