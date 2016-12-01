@@ -53,9 +53,15 @@ db.<collection>.find( { rated: "PG" }, { title: 1 } )
   
 ```
 
-  * Cursors: Look for MongoDB cursor document to know more about it
+  * Cursors: Look for MongoDB cursor document to know more about it (http://docs.mongodb.org)
+
+```
+var c = db.movieDetails.find();
+c.objsLeftInBatch();
+```
 
   * Projections: return explicitly include fields. Improve the efficiency of queries by limiting the returned fields.
+    * By default, _id field is always returned in the results
 
 # Comparison Operators
 
