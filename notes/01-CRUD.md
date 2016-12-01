@@ -1,7 +1,7 @@
 # Creating documents
 
 * insertOne({"title": "Rocky", "year": "1976"})
-* insertMany
+* insertMany([{}, {}, {}])
 * What will happen if one error happens during inserting multiple documents?
 
 # _id Field
