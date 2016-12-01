@@ -47,6 +47,3 @@ db.<collection>.find( { rated: "PG" }, { title: 1 } )
 
 * find() — return a cursor, findOne() — return a document
 
-# Update Documents
-
-* insertOne()
