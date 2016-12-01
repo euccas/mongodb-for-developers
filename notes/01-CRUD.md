@@ -1,6 +1,6 @@
 # Creating documents
 
-* insertOne
+* insertOne({"title": "Rocky", "year": "1976"})
 * insertMany
 * What will happen if one error happens during inserting multiple documents?
 
@@ -17,6 +17,10 @@
 db.<collection>.find( {rated: "PG-13", year: 2009} ).pretty()
 db.<collection>.find( {rated: "PG-13"} ).count()
 ```
+
+* find() — return a cursor, findOne() — return a document
+
+* find().pretty()
 
 * You can use dot notation, but don't forget the double quotes!
 	
@@ -42,8 +46,3 @@ db.<collection>.find( { rated: "PG" }, { title: 1 } )
   * $lt
   * $lte
   * $ne
-
-# Find
-
-* find() — return a cursor, findOne() — return a document
-
