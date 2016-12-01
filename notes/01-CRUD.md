@@ -53,9 +53,9 @@ db.<collection>.find( { rated: "PG" }, { title: 1 } )
   
 ```
 
-  * Look for MongoDB cursor document to know more about it
+  * Cursors: Look for MongoDB cursor document to know more about it
 
-* Projections: return explicitly include fields. Improve the efficiency of queries by limiting the returned fields.
+  * Projections: return explicitly include fields. Improve the efficiency of queries by limiting the returned fields.
 
 # Comparison Operators
 
