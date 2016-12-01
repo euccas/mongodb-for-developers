@@ -27,14 +27,15 @@ db.<collection>.find( {rated: "PG-13"} ).count()
 ```
 db.<collection>.find( { "tomato.meter": 100 } ).count()
 ```
-	
-* Expression matches on Arrays
-  * Look for MongoDB cursor document to know more about it
-  * Projections: return explicitly include fields. Improve the efficiency of queries by limiting the returned fields.
+* Implicit and operation
 
 ```
 db.<collection>.find( { rated: "PG" }, { title: 1 } )
 ```
+
+* Expression matches on Arrays
+  * Look for MongoDB cursor document to know more about it
+  * Projections: return explicitly include fields. Improve the efficiency of queries by limiting the returned fields.
 
 # Comparison Operators
 
