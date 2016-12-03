@@ -1,15 +1,17 @@
-# Creating documents
+# CRUD
+
+## Creating documents
 
 * insertOne({"title": "Rocky", "year": "1976"})
 * insertMany([{}, {}, {}])
 * What will happen if one error happens during inserting multiple documents?
 
-# _id Field
+## _id Field
 
 * 12-byte hex string
 * objectId: Date, Mac address, pid, counter
 
-# Reading documents
+## Reading documents
 
 * query operators, query string
 
@@ -63,7 +65,7 @@ c.objsLeftInBatch();
   * Projections: return explicitly include fields. Improve the efficiency of queries by limiting the returned fields.
     * By default, _id field is always returned in the results
 
-# Comparison Operators
+## Comparison Operators
 
 * For comparison of different BSON type values, use the comparison operators
   * $eq
@@ -73,7 +75,7 @@ c.objsLeftInBatch();
   * $lte
   * $ne
 
-# Element Operators
+## Element Operators
 
 Operators:
 * $exists
