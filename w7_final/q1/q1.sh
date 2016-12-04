@@ -1,0 +1,1 @@
+mongorestore --port 27017 -d enron -c messages ./q1/enron/messages.bson
